@@ -13,9 +13,6 @@ import java.util.List;
 
 public class CSVUtil {
 
-        public static String TYPE = "text/csv";
-        static String[] headers = { "Name", "Author","Published","Price","Description","Pages","Language","Publisher","Rating" };
-
         public static List<Book> csvToTutorials(InputStream is) {
             try (BufferedReader fileReader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
                  CSVParser csvParser = new CSVParser(fileReader,
